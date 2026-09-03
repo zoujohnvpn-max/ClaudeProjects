@@ -1,4 +1,4 @@
-# PDIV 报表生成工具 v1.0
+# PDIV 报表生成工具 v1.1
 
 把新的原始数据表丢进来，一次生成 Excel 报表和网页版趋势图。
 
@@ -48,6 +48,8 @@ pip install openpyxl
 
 没装的话工具会弹窗提示这条命令。
 
+如果双击 .bat 提示找不到 Python，说明装 Python 时没勾 "Add Python to PATH"，重装勾上即可。
+
 ## 不想用界面
 
 命令行也能跑：
@@ -62,7 +64,7 @@ python pdiv_report_gui_v1.0.0.py 源数据.xlsx 输出目录 --zh --en
 
 | 文件 | 作用 |
 |---|---|
-| `运行_PDIV报表工具.bat` | 双击入口，自动挑版本号最高的界面脚本运行 |
+| `运行_PDIV报表工具.bat` | 双击入口，自动找 Python（优先 py 启动器）并挑版本号最高的界面脚本 |
 | `pdiv_report_gui_v1.0.0.py` | 界面 + 调度 + 源文件校验 |
 | `pdiv_nok_report_v1.2.1.py` | 生成 Excel 报表 |
 | `pdiv_nok_html_report_v1.2.0.py` | 生成网页报表 |
