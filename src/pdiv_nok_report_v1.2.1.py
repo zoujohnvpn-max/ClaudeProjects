@@ -9,9 +9,10 @@
 # v1.1.0 (2026-09-03): add dedicated chart sheet with per-metric line charts, fix category axis
 #                      position, use string references for date categories, apply validated palette
 # v1.2.0 (2026-09-03): add --lang switch, ship English wording for every sheet, header and note
+# v1.2.1 (2026-09-03): reword English raw-data headers and note 1 after a translation review
 # =============================================
 
-VERSION = "v1.2.0"
+VERSION = "v1.2.1"
 
 import re
 import sys
@@ -113,7 +114,8 @@ TEXT = {
         "notes": [
             "Notes:",
             "1. Reject rate = NOK count of that PDIV pass / output of the same day. Rates are recalculated "
-            "by the script from the raw NOK counts so the basis is consistent "
+            "by the script from the raw NOK counts so the basis is consistent, and the values shown "
+            "here are those recalculated figures "
             "(the raw file wrote \"2/0.95\" without a percent sign for Station A PDIV #2 on 2026.07.27).",
             "2. Total reject rate = (PDIV #1 + #2 + #3 NOK) / daily output; one unit may be counted in "
             "more than one inspection pass.",
@@ -124,10 +126,10 @@ TEXT = {
         "marker": "▼ ",
         # 原始表的表头是中文，英文版把这一行译过来，数据本身原样保留
         "raw_heads": ["Date", "Station A total output",
-                      "PDIV #1 NOK Station A / rate", "PDIV #2 NOK Station A / rate",
-                      "PDIV #3 NOK Station A / rate", "Station B total output",
-                      "PDIV #1 NOK Station B / rate", "PDIV #2 NOK Station B / rate",
-                      "PDIV #3 NOK Station B / rate"],
+                      "Station A PDIV #1 NOK / rate", "Station A PDIV #2 NOK / rate",
+                      "Station A PDIV #3 NOK / rate", "Station B total output",
+                      "Station B PDIV #1 NOK / rate", "Station B PDIV #2 NOK / rate",
+                      "Station B PDIV #3 NOK / rate"],
     },
 }
 
